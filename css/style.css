@@ -1,0 +1,202 @@
+body {
+
+    background-image: url('../images/background-image.jpeg');
+}
+
+main {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* HEADER*/
+
+.container_header-img {
+    display: flex;
+}
+
+.img_header {
+
+    width: 50%;
+}
+
+.navbar-nav {
+    font-size: 16px;
+
+}
+
+
+
+/* HEADER*/
+
+.carru {
+
+    height: 400px;
+    width: 400px;
+}
+
+
+.card-body {
+    background-color: blanchedalmond;
+}
+
+
+.btn-primary {
+    background-color: darksalmon;
+    border-color: darksalmon;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.img-descuentos {
+
+
+    height: 350px;
+    width: 350px;
+}
+
+.img_container-descuentos {
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.p-descuentos {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* PRODUCTOS */
+
+.card-title,
+.card-text {
+
+    text-align: center;
+}
+
+.card {
+
+    margin: 18px;
+}
+
+.footer_socialmedia {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer_socialmedia i {
+
+    padding: 10px;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.container_preguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    background-image: url("../images/background-image.jpeg");
+
+}
+
+.container_preguntas-cajas {
+
+    text-align: left;
+    height: 600px;
+    width: 600px;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.preg__frecuentes {
+    font-size: 23px;
+    font-weight: bold;
+
+}
+
+.preg__frecuentes__respuestas {
+    font-size: 18px;
+
+}
+
+
+/* SOBRE NOSOTROS */
+
+.container_aboutus {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/background-image.jpeg");
+
+
+}
+
+.container_aboutus-caja {
+
+    height: 500px;
+    width: 500px;
+
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #af9274;
+    background-image: url("../images/footer.jpeg");
+
+}
+
+.container_aboutus-caja p {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+
+}
+
+/* CONTACTENOS */
+
+.formulario_contacto {
+
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-image: url("../images/background-image.jpeg");
+    font-size: 18px;
+
+}
+
+@media screen and (max-width: 378px) {
+
+    .container_header-img {
+        display: none;
+    }
+
+    .container_preguntas {
+        padding-top: 20px
+    }
+
+    .container_preguntas-cajas {
+
+        width: 300px;
+    }
+
+    .preg__frecuentes {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .preg__frecuentes__respuestas {
+        font-size: 16px;
+    }
+
+    .container_aboutus-caja {
+        line-height: 33px;
+    }
+
+
+}
