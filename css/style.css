@@ -1,5 +1,12 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+body {
     background-image: url('../images/background-image.jpeg');
 }
 
@@ -8,7 +15,7 @@ main {
 }
 
 
-/* HEADER*/
+/*############## HEADER ##############*/
 
 .container_header-img {
     display: flex;
@@ -19,24 +26,23 @@ main {
     width: 50%;
 }
 
-.navbar-nav {
-    font-size: 16px;
-
+.navbar-mod {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
 }
 
-
-
-/* HEADER*/
-
-.carru {
-
-    height: 400px;
-    width: 400px;
-}
-
+/*############## FIN HEADER ##############*/
 
 .card-body {
     background-color: blanchedalmond;
+
+}
+
+.card {
+    -webkit-box-shadow: 0px 0px 24px 4px rgba(135, 135, 135, 1);
+    -moz-box-shadow: 0px 0px 24px 4px rgba(135, 135, 135, 1);
+    box-shadow: 0px 0px 24px 4px rgba(135, 135, 135, 1);
+    overflow: hidden;
 }
 
 
@@ -48,10 +54,11 @@ main {
     justify-content: center;
 }
 
+.btn-primary:hover {
+    background-image: white !important;
+}
 
 .img-descuentos {
-
-
     height: 350px;
     width: 350px;
 }
@@ -59,18 +66,10 @@ main {
 .img_container-descuentos {
 
     padding: 20px;
-    display: flex;
-    justify-content: center;
+
+
 }
 
-.p-descuentos {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-}
 
 /* PRODUCTOS */
 
@@ -85,6 +84,8 @@ main {
     margin: 18px;
 }
 
+/*############## FOOTER ##############*/
+
 .footer_socialmedia {
     display: flex;
     justify-content: center;
@@ -95,6 +96,36 @@ main {
 
     padding: 10px;
 }
+
+.fa-brands {
+    color: black;
+}
+
+.btn-goup {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+}
+
+.fa-solid {
+    color: chocolate;
+
+}
+
+.fa-solid:hover {
+    color: gray;
+    transition: 0.3s;
+}
+
+.fa-brands:hover {
+    color: gray;
+    transition: 0.3s;
+}
+
+
+
+/*############## FIN FOOTER ##############*/
+
 
 /* PREGUNTAS FRECUENTES */
 
@@ -196,6 +227,14 @@ main {
 
     .container_aboutus-caja {
         line-height: 33px;
+    }
+
+    .p-descuentos {
+        border-style: none;
+    }
+
+    .img-hidden {
+        display: none;
     }
 
 

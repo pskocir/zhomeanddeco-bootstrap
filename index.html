@@ -15,17 +15,18 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Z Home & Deco</title>
+    <link rel="icon" href="../images/favicon_zhome.jpg">
 </head>
 <header>
     <div class="container_header-img">
         <img class="img_header" src="./images/logo_header.jpg" class="img-fluid" alt="...">
         <img class="img_header" src="./images/logo_imagen.jpg" class="img-fluid" alt="...">
     </div>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg navbar-mod">
         <div class="container-fluid">
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -35,21 +36,24 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-style">
 
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">INICIO</a>
+                        <a class="nav-link nav-hover" aria-current="page" href="./index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
+                        <a class="nav-link nav-hover" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./pages/preguntasfrecuentes.html">PREGUNTAS
+                        <a class="nav-link nav-hover" aria-current="page"
+                            href="./pages/preguntasfrecuentes.html">PREGUNTAS
                             FRECUENTES</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./pages/sobrenosotros.html">SOBRE NOSOTROS</a>
+                        <a class="nav-link nav-hover" aria-current="page" href="./pages/sobrenosotros.html">SOBRE
+                            NOSOTROS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./pages/contactenos.html">CONTACTENOS</a>
+                        <a class="nav-link nav-hover" aria-current="page"
+                            href="./pages/contactenos.html">CONTACTENOS</a>
                     </li>
                 </ul>
 
@@ -60,41 +64,18 @@
 
 <body>
     <main>
-        <!-- <div class="carru">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images/acolchados_destacados.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/almohadones_destacados.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/manta_destacados.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div> -->
-
         <section>
             <div class="container">
                 <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <h2 style="font-family: 'Dancing Script'">DESTACADOS</h2>
+                    </div>
                     <div class="col-12 col-md-4">
                         <div class="card" style="width: 18rem;">
                             <img src="./images/acolchados_destacados.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
 
-                                <a href="#" class="btn btn-primary btn-mod">ACOLCHADOS</a>
+                                <a href="#" class="btn btn-primary">ACOLCHADOS</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +84,7 @@
                             <img src="./images/almohadones_destacados.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
 
-                                <a href="#" class="btn btn-primary btn-mod">ALMOHADONES</a>
+                                <a href="#" class="btn btn-primary">ALMOHADONES</a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +93,7 @@
                             <img src="./images/manta_destacados.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
 
-                                <a href="#" class="btn btn-primary btn-mod">MANTAS</a>
+                                <a href="#" class="btn btn-primary">MANTAS</a>
                             </div>
                         </div>
                     </div>
@@ -124,20 +105,14 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="img_container-descuentos">
-                        <img class="img-descuentos" src="./images/prod_ofertas.png" class="rounded float-start"
+                        <img class="img-fluid" src="./images/20off_responsive.png" class="rounded float-start"
                             alt="...">
-
-
                     </div>
 
                 </div>
-
-
                 <div class="col-12 col-md-6">
-                    <div class="p-descuentos">
-                        <p>20% OFF</p>
-                        <p>En Productos Seleccionados</p>
-
+                    <div class="img_container-descuentos">
+                        <img class="img-fluid img-hidden" src="./images/envio_a_todo_el_pais.jpg" alt="...">
                     </div>
                 </div>
             </div>
@@ -151,19 +126,17 @@
                 <div class="card-body">
                     <h5 class="card-title">Redes Sociales</h5>
                     <div class="footer_socialmedia">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="btn-goup">
+                        <a href="#"> <i class="fa-solid fa-circle-up fa-xl"></i></a>
                     </div>
 
                 </div>
             </div>
         </footer>
-
-
-
-
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
             crossorigin="anonymous"></script>
