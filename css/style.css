@@ -6,8 +6,10 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     background-image: url('../images/background-image.jpeg');
+
 }
 
 main {
@@ -28,7 +30,8 @@ main {
 
 .navbar-mod {
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
 }
 
 /*############## FIN HEADER ##############*/
@@ -47,15 +50,18 @@ main {
 
 
 .btn-primary {
-    background-color: darksalmon;
-    border-color: darksalmon;
+    background: rgb(194, 147, 96);
+    background: linear-gradient(90deg, rgba(194, 147, 96, 1) 0%, rgba(247, 204, 155, 1) 100%);
+    border-color: rgb(194, 147, 96);
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
 .btn-primary:hover {
-    background-image: white !important;
+
+    color: #91663d !important;
+    border-color: #91663d !important;
 }
 
 .img-descuentos {
@@ -67,6 +73,14 @@ main {
 
     padding: 20px;
 
+
+}
+
+.h2-destacados {
+
+
+    animation-duration: 1.5s;
+    overflow: hidden;
 
 }
 
