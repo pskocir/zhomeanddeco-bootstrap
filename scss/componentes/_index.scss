@@ -1,0 +1,41 @@
+.h2-destacados {
+  animation-duration: 1.5s;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: $color-card-background;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  -moz-box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  overflow: hidden;
+}
+
+.img_container-descuentos {
+  padding: 20px;
+}
+
+@media screen and (max-width: 378px) {
+  .container_header-img {
+    display: none;
+  }
+
+  .p-descuentos {
+    border-style: none;
+  }
+
+  .img-hidden {
+    display: none;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .h2-destacados {
+    display: none;
+  }
+}

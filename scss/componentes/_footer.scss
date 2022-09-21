@@ -1,0 +1,41 @@
+/*############## FOOTER ##############*/
+
+.h5-titulo {
+  text-align: center;
+}
+
+.footer_socialmedia {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer_socialmedia i {
+  padding: 10px;
+}
+
+.fa-brands {
+  color: black;
+
+  &:hover {
+    color: $color-fa-brands;
+    transition: 0.3s;
+  }
+}
+
+.btn-goup {
+  display: flex;
+  justify-content: right;
+  text-decoration: none;
+}
+
+.fa-solid {
+  color: $color-btn-up;
+
+  &:hover {
+    color: $color-fa-brands;
+    transition: 0.3s;
+  }
+}
+
+/*############## FIN FOOTER ##############*/
