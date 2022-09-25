@@ -5,9 +5,7 @@
 }
 
 .footer_socialmedia {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  @extend %display-flexible-centrado;
 }
 
 .footer_socialmedia i {

@@ -1,6 +1,5 @@
-.h2-destacados {
-  animation-duration: 1.5s;
-  overflow: hidden;
+.titulo {
+  @include titulo_principal(35px, black);
 }
 
 .card-body {

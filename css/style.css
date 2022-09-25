@@ -1,3 +1,9 @@
+.footer_socialmedia, .btn-destacado {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,26 +17,30 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  font-family: "Raleway", sans-serif;
-}
-
-.btn-primary {
+.btn-destacado {
   background: rgb(194, 147, 96);
   background: linear-gradient(90deg, rgb(194, 147, 96) 0%, rgb(247, 204, 155) 100%);
   border-color: rgb(194, 147, 96);
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
-.btn-primary:hover {
-  color: #91663d !important;
-  border-color: #91663d !important;
+.btn-destacado:hover {
+  color: #91663d;
+  border-color: #91663d;
 }
 
-.h2-destacados {
-  animation-duration: 1.5s;
-  overflow: hidden;
+.form-size {
+  max-width: 70%;
+}
+
+main {
+  background-color: url("../images/background-image.jpeg");
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.titulo {
+  font-size: 35px;
+  color: black;
+  padding: 10px;
 }
 
 .card-body {
@@ -82,12 +92,6 @@ main {
 /*############## FIN HEADER ##############*/
 /*############## FOOTER ##############*/
 .h5-titulo {
-  text-align: center;
-}
-
-.footer_socialmedia {
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 
