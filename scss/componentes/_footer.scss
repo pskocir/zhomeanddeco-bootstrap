@@ -1,23 +1,39 @@
 /*############## FOOTER ##############*/
 
-.h5-titulo {
-  text-align: center;
+.bg-footer {
+  background-image: url("../images/bg-footer.png");
+  background-size: cover;
 }
 
-.footer_socialmedia {
-  @extend %display-flexible-centrado;
+.h5-footer {
+  text-align: center;
+  font-family: $font-navbar;
+  font-weight: bold;
+}
+@media screen and (max-width: 378px) {
+  .h5-footer {
+    font-size: 15px;
+  }
 }
 
 .footer_socialmedia i {
-  padding: 10px;
+  padding: 18px;
 }
 
 .fa-brands {
-  color: black;
+  color: $color-5;
 
   &:hover {
-    color: $color-fa-brands;
+    color: $color-3;
     transition: 0.3s;
+  }
+}
+
+.localidad-mod {
+  text-decoration: none;
+  color: $color-5;
+  &:hover {
+    color: $color-4;
   }
 }
 
@@ -25,15 +41,20 @@
   display: flex;
   justify-content: right;
   text-decoration: none;
+  position: relative;
 }
 
 .fa-solid {
-  color: $color-btn-up;
+  color: $color-5;
 
   &:hover {
-    color: $color-fa-brands;
+    color: $color-3;
     transition: 0.3s;
   }
+}
+
+.container_redes {
+  border-bottom: 1px solid;
 }
 
 /*############## FIN FOOTER ##############*/

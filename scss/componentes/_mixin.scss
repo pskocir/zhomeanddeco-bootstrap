@@ -1,5 +1,7 @@
-@mixin titulo_principal($size, $color) {
+@mixin titulo_principal($size, $color, $font) {
   font-size: $size;
   color: $color;
-  padding: 10px;
+  font-family: $font;
+  padding: 0;
+  margin: 0;
 }

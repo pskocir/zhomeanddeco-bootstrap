@@ -1,40 +1,53 @@
-.titulo {
-  @include titulo_principal(35px, black);
+.img_container-descuentos {
+  height: 450px;
+  width: 450px;
+  padding: 20px 0 20px 0;
 }
 
-.card-body {
-  background-color: $color-card-background;
+.carrusel-control {
+  background-color: $color-5;
+}
+
+.carrusel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.carrusel-img-1 {
+  background-image: url("../images/1.png");
+}
+.carrusel-img-2 {
+  background-image: url("../images/2.png");
+}
+.carrusel-img-3 {
+  background-image: url("../images/3.png");
 }
 
 .card {
-  -webkit-box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  -moz-box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  overflow: hidden;
+  margin: 10px;
 }
 
 .img_container-descuentos {
-  padding: 20px;
+  height: 350px;
+  width: 350px;
+  padding: 20px 0 20px 0;
 }
 
 @media screen and (max-width: 378px) {
   .container_header-img {
     display: none;
   }
-
-  .p-descuentos {
-    border-style: none;
+  .carrusel {
+    background-position: center;
+    height: 30vh;
   }
+}
 
-  .img-hidden {
-    display: none;
-  }
-
-  .card {
-    margin: 10px;
-  }
-
-  .h2-destacados {
-    display: none;
+@media screen and (max-width: 768px) {
+  .carrusel {
+    background-position: center;
   }
 }
