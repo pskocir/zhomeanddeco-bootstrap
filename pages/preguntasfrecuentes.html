@@ -27,7 +27,7 @@
   <link rel="icon" href="../images/favicon_zhome.jpg">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <header>
     <div class="container-fluid container_header-img">
       <img class="img_header" src="../images/header.png" alt="Logo Z Home & Deco">
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
 
-        <img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco">
+        <a href="../index.html"><img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco"></a>
         <h1 class="titulo">Home & Deco</h1>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -43,7 +43,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto fs-4 navbar-mod">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto fs-4">
             <li class="nav-item">
               <a class="nav-link nav-lista" href="../index.html">Inicio</a>
             </li>
@@ -51,7 +51,8 @@
               <a class="nav-link nav-lista" href="../pages/productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-lista" href="../pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
+              <a class="nav-link nav-lista active" href="../pages/preguntasfrecuentes.html"
+                aria-current="page">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-lista" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
@@ -71,43 +72,45 @@
   </header>
 
 
+  <main>
+    <section>
 
-  <section>
+      <div class="container-fluid">
 
-    <div class="container-fluid">
-      <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
-      <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
-        ubicación, en el checkout, en el momento previo al pago.</p>
-      <br />
+        <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
+        <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
+          ubicación, en el checkout, en el momento previo al pago.</p>
+        <br />
 
-      <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
-      <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu
-        compra.
-      </p>
-      <br />
+        <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
+        <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu
+          compra.
+        </p>
+        <br />
 
-      <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
-      <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
-      <br />
+        <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
+        <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
+        <br />
 
-      <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
-      <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de
-        que
-        se
-        despacha el pedido.</p>
-      <br />
+        <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
+        <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de
+          que
+          se
+          despacha el pedido.</p>
+        <br />
 
-      <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
-      <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego
-        de
-        recibida la compra.</p>
-      <br />
+        <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
+        <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego
+          de
+          recibida la compra.</p>
+        <br />
 
-    </div>
-    </div>
-  </section>
 
-  <footer>
+      </div>
+
+    </section>
+  </main>
+  <footer class="mt-auto">
     <div class="card container-fluid bg-footer">
       <div class="card-body">
         <div class="container">

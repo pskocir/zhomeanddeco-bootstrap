@@ -27,7 +27,7 @@
   <link rel="icon" href="../images/favicon_zhome.jpg">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <header>
     <div class="container-fluid container_header-img">
       <img class="img_header" src="../images/header.png" alt="Logo Z Home & Deco">
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
 
-        <img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco">
+        <a href="../index.html"><img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco"></a>
         <h1 class="titulo">Home & Deco</h1>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -43,7 +43,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto fs-4 navbar-mod">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto fs-4">
             <li class="nav-item">
               <a class="nav-link nav-lista" href="../index.html">Inicio</a>
             </li>
@@ -54,7 +54,8 @@
               <a class="nav-link nav-lista" href="../pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-lista" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
+              <a class="nav-link nav-lista active" href="../pages/sobrenosotros.html" aria-current="page">Sobre
+                Nosotros</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-lista" href="../pages/contactenos.html">Contactenos</a>
@@ -70,28 +71,29 @@
 
 
   </header>
+  <main>
+    <section>
 
-  <section>
+      <div class="container_aboutus">
+        <div class="container-fluid container_aboutus-caja animate__animated animate__backInRight">
+          <p>
+            Somos una pareja amantes de la deco.</p>
+          <br>
+          <p>Todos nuestros productos estan
+            pensados con amor, para brindarte lo mejor y que cada rincon de tu hogar
+            sea magico.</p>
+          <br>
+          <p> Muchas gracias por compartir esta pasion.</p>
+          <br><br><br>
+          <p> Z Home & Deco.</p>
 
-    <div class="container_aboutus">
-      <div class="container-fluid container_aboutus-caja animate__animated animate__backInRight">
-        <p>
-          Somos una pareja amantes de la deco.</p>
-        <br>
-        <p>Todos nuestros productos estan
-          pensados con amor, para brindarte lo mejor y que cada rincon de tu hogar
-          sea magico.</p>
-        <br>
-        <p> Muchas gracias por compartir esta pasion.</p>
-        <br><br><br>
-        <p> Z Home & Deco.</p>
+        </div>
 
       </div>
 
-    </div>
-
-  </section>
-  <footer>
+    </section>
+  </main>
+  <footer class="mt-auto">
     <div class="card container-fluid bg-footer">
       <div class="card-body">
         <div class="container">

@@ -9,17 +9,15 @@
   width: 100%;
 }
 
-.navbar-mod {
-  @include titulo_principal(20px, $color-5, $font-navbar);
+.nav-lista {
+  @include titulo_principal($size-3, $color-5, $font-navbar);
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-.nav-lista:hover {
-  border-bottom: 1px solid $color-5;
-  transition: 0.5s;
-  padding-top: 3px;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $color-4;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -30,7 +28,7 @@
     display: flex;
   }
   .nav-lista {
-    font-size: 19px;
+    @include titulo_principal(19px, $color-5, $font-navbar);
   }
 }
 @media screen and (min-width: 992px) {
@@ -39,6 +37,12 @@
   }
   .titulo {
     display: none;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1017px) {
+  .nav-lista {
+    @include titulo_principal(19px, $color-5, $font-navbar);
   }
 }
 

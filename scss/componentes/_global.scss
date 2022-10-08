@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,7 +56,4 @@ main {
 }
 
 @media screen and (max-width: 992px) {
-  .navbar-mod {
-    @include titulo_principal(20px, $color-5, $font-navbar);
-  }
 }

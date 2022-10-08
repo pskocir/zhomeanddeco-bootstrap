@@ -14,7 +14,13 @@
     p {
       text-align: center;
       font-family: "Raleway", sans-serif;
-      font-size: 20px;
+      font-size: $size-3;
     }
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .container_aboutus-caja p {
+    font-size: $size-2;
   }
 }

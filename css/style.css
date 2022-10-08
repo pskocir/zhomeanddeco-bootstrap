@@ -1,4 +1,4 @@
-.card-mod, .btn-destacado {
+.container-p-destacado, .container-col, .card-mod, .btn-destacado {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -10,6 +10,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -61,21 +62,6 @@ main {
   margin-bottom: 14px;
 }
 
-@media screen and (max-width: 992px) {
-  .navbar-mod {
-    font-size: 20px;
-    color: #694f38;
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
-  }
-}
-.img_container-descuentos {
-  height: 450px;
-  width: 450px;
-  padding: 20px 0 20px 0;
-}
-
 .carrusel-control {
   background-color: #694f38;
 }
@@ -100,14 +86,33 @@ main {
   background-image: url("../images/3.png");
 }
 
-.card {
-  margin: 10px;
+.h2-destacados {
+  font-size: 60px;
+  color: #694f38;
+  font-family: "Cookie", cursive;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.img_container-descuentos {
-  height: 350px;
-  width: 350px;
-  padding: 20px 0 20px 0;
+.container-col {
+  align-items: center;
+  height: 250px;
+  background-color: beige;
+}
+
+.container-p-destacado {
+  align-items: center;
+  background-color: #bca78f;
+}
+
+.p-destacado {
+  font-size: 30px;
+}
+
+.card-size {
+  height: auto;
+  width: auto;
 }
 
 @media screen and (max-width: 378px) {
@@ -123,6 +128,15 @@ main {
   .carrusel {
     background-position: center;
   }
+  .card-img-top {
+    height: 400px;
+    width: 300px;
+    justify-content: center;
+  }
+  .container-p-destacado {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 /*############## HEADER ##############*/
 .container_header-img {
@@ -134,7 +148,7 @@ main {
   width: 100%;
 }
 
-.navbar-mod {
+.nav-lista {
   font-size: 20px;
   color: #694f38;
   font-family: "Roboto", sans-serif;
@@ -144,11 +158,9 @@ main {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 .nav-lista:hover {
-  border-bottom: 1px solid #694f38;
-  transition: 0.5s;
-  padding-top: 3px;
+  text-decoration: underline;
+  text-decoration-color: #be9972;
 }
 
 @media screen and (max-width: 992px) {
@@ -160,6 +172,10 @@ main {
   }
   .nav-lista {
     font-size: 19px;
+    color: #694f38;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -170,11 +186,24 @@ main {
     display: none;
   }
 }
+@media screen and (min-width: 993px) and (max-width: 1017px) {
+  .nav-lista {
+    font-size: 19px;
+    color: #694f38;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+}
 /*############## FIN HEADER ##############*/
 /*############## FOOTER ##############*/
 .bg-footer {
   background-image: url("../images/bg-footer.png");
   background-size: cover;
+}
+
+.footer-bottom {
+  position: absolute;
 }
 
 .h5-footer {
@@ -248,24 +277,21 @@ main {
   font-size: 20px;
 }
 
+@media screen and (max-width: 378px) {
+  .container_aboutus-caja p {
+    font-size: 15px;
+  }
+}
 /*############## PREGUNTAS FRECUENTES ##############*/
 .preg__frecuentes {
   font-size: 23px;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .preg__frecuentes__respuestas {
   font-size: 18px;
-}
-
-.container__pregfrecuentes {
-  display: flex;
-  height: 620px;
-  width: 500px;
-  margin: 20px;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #af9274;
+  margin-left: 5px;
 }
 
 @media screen and (max-width: 378px) {
@@ -278,6 +304,7 @@ main {
 }
 /*############## FIN PREGUNTAS FRECUENTES ##############*/
 .card-contacto {
+  margin-top: 15px;
   margin-bottom: 15px;
   width: 80%;
 }
