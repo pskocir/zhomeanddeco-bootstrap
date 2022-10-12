@@ -1,5 +1,5 @@
 .carrusel-control {
-  background-color: $color-5;
+  background-color: $color-4;
 }
 
 .carrusel {
@@ -29,13 +29,25 @@
   @extend %display-flexible-centrado;
   align-items: center;
   height: 250px;
-  background-color: beige;
+  background-color: $color-8;
 }
 
-.container-p-destacado {
+.container-p-destacado-1 {
   @extend %display-flexible-centrado;
   align-items: center;
-  background-color: $color-2;
+  background-color: $color-11;
+}
+
+.container-p-destacado-2 {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  background-color: $color-7;
+}
+
+.container-p-destacado-3 {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  background-color: $color-12;
 }
 
 .p-destacado {
@@ -45,6 +57,10 @@
 .card-size {
   height: auto;
   width: auto;
+}
+
+.nopadding {
+  padding: 0;
 }
 
 @media screen and (max-width: 378px) {
@@ -66,8 +82,16 @@
     width: 300px;
     justify-content: center;
   }
-  .container-p-destacado {
-    flex-direction: column;
-    flex-wrap: wrap;
+
+  .top {
+    order: 2;
+  }
+  .bottom {
+    order: 1;
+  }
+
+  .img-fluid {
+    width: 200px;
+    height: 200px;
   }
 }

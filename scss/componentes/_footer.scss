@@ -3,6 +3,8 @@
 .bg-footer {
   background-image: url("../images/bg-footer.png");
   background-size: cover;
+
+  background-repeat: no-repeat;
 }
 
 .footer-bottom {
@@ -13,6 +15,7 @@
   text-align: center;
   font-family: $font-navbar;
   font-weight: bold;
+  margin-top: 10px;
 }
 @media screen and (max-width: 378px) {
   .h5-footer {
@@ -25,7 +28,7 @@
 }
 
 .fa-brands {
-  color: $color-5;
+  color: $color-10;
 
   &:hover {
     color: $color-3;
@@ -34,11 +37,16 @@
 }
 
 .localidad-mod {
+  @extend %d-flex-align-center;
   text-decoration: none;
   color: $color-5;
   &:hover {
     color: $color-4;
   }
+}
+
+.tel-mod {
+  @extend %d-flex-align-center;
 }
 
 .btn-goup {

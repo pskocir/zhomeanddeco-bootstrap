@@ -32,8 +32,8 @@
     <div class="container-fluid container_header-img">
       <img class="img_header" src="../images/header.png" alt="Logo Z Home & Deco">
     </div>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-bg">
+      <div class="container-fluid navbar-bg">
 
         <a href="../index.html"><img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco"></a>
         <h1 class="titulo">Home & Deco</h1>
@@ -48,11 +48,10 @@
               <a class="nav-link nav-lista" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-lista" href="../pages/productos.html">Productos</a>
+              <a class="nav-link nav-lista" href="../pages/productos.html" aria-current="page">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-lista active" href="../pages/preguntasfrecuentes.html"
-                aria-current="page">Preguntas Frecuentes</a>
+              <a class="nav-link nav-lista active" href="../pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-lista" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
@@ -75,43 +74,44 @@
   <main>
     <section>
 
-      <div class="container-fluid">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <div class="caja">
+          <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
+          <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
+            ubicación, en el checkout, en el momento previo al pago.</p>
+          <br />
 
-        <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
-        <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
-          ubicación, en el checkout, en el momento previo al pago.</p>
-        <br />
+          <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
+          <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu
+            compra.
+          </p>
+          <br />
 
-        <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
-        <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu
-          compra.
-        </p>
-        <br />
+          <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
+          <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
+          <br />
 
-        <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
-        <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
-        <br />
+          <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
+          <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de
+            que
+            se
+            despacha el pedido.</p>
+          <br />
 
-        <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
-        <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de
-          que
-          se
-          despacha el pedido.</p>
-        <br />
+          <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
+          <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego
+            de
+            recibida la compra.</p>
+          <br />
 
-        <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
-        <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego
-          de
-          recibida la compra.</p>
-        <br />
-
-
+        </div>
       </div>
 
     </section>
   </main>
   <footer class="mt-auto">
-    <div class="card container-fluid bg-footer">
+    <div class="container-fluid bg-footer">
+
       <div class="card-body">
         <div class="container">
           <h5 class="h5-footer">SEGUINOS EN NUESTRAS REDES</h5>
@@ -119,13 +119,13 @@
         <div class="footer_socialmedia">
           <div class="container">
             <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-12 d-flex justify-content-center">
                 <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 offset-md-5">
+              <div class="col-12 d-flex justify-content-center">
                 <a class="localidad-mod"
                   href="https://www.google.com.ar/maps/place/San+Fernando,+Provincia+de+Buenos+Aires/@-34.4505444,-58.5841089,14z/data=!3m1!4b1!4m5!3m4!1s0x95bca568119a2861:0x27933dc457c12b90!8m2!3d-34.4430618!4d-58.5579643"
                   target="_blank"><i class="fa-solid fa-location-dot fa-xl"></i>San
@@ -133,8 +133,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 offset-md-5">
-                <i class="fa-brands fa-whatsapp fa-xl"></i>11-1234-7655
+              <div class="col-12 d-flex justify-content-center">
+                <i class="fa-brands fa-whatsapp fa-xl"></i><span class="tel-mod">11-1234-5678</span>
               </div>
             </div>
           </div>
