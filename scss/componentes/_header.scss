@@ -19,8 +19,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: $color-4;
+    color: $color-2;
   }
 }
 
@@ -41,12 +40,6 @@
   }
   .titulo {
     display: none;
-  }
-}
-
-@media screen and (min-width: 993px) and (max-width: 1017px) {
-  .nav-lista {
-    @include titulo_principal(19px, $color-5, $font-navbar);
   }
 }
 

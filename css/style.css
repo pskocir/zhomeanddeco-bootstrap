@@ -18,6 +18,10 @@
   overflow-x: hidden;
 }
 
+body {
+  background-color: #d4c3b7;
+}
+
 .logo_nav {
   height: 28px;
   width: 28px;
@@ -46,10 +50,12 @@
   background-color: #be9972;
   border-color: #be9972;
   color: #d4c3b7;
+  border-radius: 10px;
+  text-decoration: none;
 }
 .btn-destacado:hover {
-  background-color: #be9972 !important;
-  border-color: #c29360 !important;
+  background-color: #c29360 !important;
+  color: #d4c3b7 !important;
 }
 
 main {
@@ -183,8 +189,7 @@ main {
   text-transform: uppercase;
 }
 .nav-lista:hover {
-  text-decoration: underline;
-  text-decoration-color: #be9972;
+  color: #bca78f;
 }
 
 @media screen and (max-width: 992px) {
@@ -208,15 +213,6 @@ main {
   }
   .titulo {
     display: none;
-  }
-}
-@media screen and (min-width: 993px) and (max-width: 1017px) {
-  .nav-lista {
-    font-size: 19px;
-    color: #c29360;
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
   }
 }
 /*############## FIN HEADER ##############*/
