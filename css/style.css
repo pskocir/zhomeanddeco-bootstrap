@@ -122,7 +122,7 @@ main {
 }
 
 .h3-descuentos {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 10px;
   font-family: "Cookie", cursive;
   color: #c29360;
@@ -154,6 +154,9 @@ main {
   .img-fluid {
     width: 200px;
     height: 200px;
+  }
+  .h3-descuentos {
+    font-size: 30px;
   }
 }
 /*############## HEADER ##############*/
@@ -232,19 +235,20 @@ main {
 }
 
 .fa-brands {
-  color: #af9274;
+  color: #be9972;
 }
 .fa-brands:hover {
-  color: #ad9577;
+  color: #c29360;
   transition: 0.3s;
 }
 
 .localidad-mod {
   text-decoration: none;
-  color: #c29360;
+  color: #be9972;
 }
 .localidad-mod:hover {
-  color: #be9972;
+  color: #c29360;
+  transition: 0.3s;
 }
 
 .btn-goup {
@@ -329,8 +333,6 @@ input.form-control:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  -moz-transition: none;
-  -webkit-transition: none;
 }
 
 /*# sourceMappingURL=style.css.map */

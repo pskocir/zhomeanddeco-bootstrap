@@ -24,10 +24,10 @@
 }
 
 .fa-brands {
-  color: $color-10;
+  color: $color-4;
 
   &:hover {
-    color: $color-3;
+    color: $color-5;
     transition: 0.3s;
   }
 }
@@ -35,9 +35,10 @@
 .localidad-mod {
   @extend %d-flex-align-center;
   text-decoration: none;
-  color: $color-5;
+  color: $color-4;
   &:hover {
-    color: $color-4;
+    color: $color-5;
+    transition: 0.3s;
   }
 }
 
