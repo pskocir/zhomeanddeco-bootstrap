@@ -13,14 +13,10 @@
 
 .h5-footer {
   text-align: center;
-  font-family: $font-navbar;
+  font-family: $font-navbar, cursive;
   font-weight: bold;
+  font-size: $size-3;
   margin-top: 10px;
-}
-@media screen and (max-width: 378px) {
-  .h5-footer {
-    font-size: 15px;
-  }
 }
 
 .footer_socialmedia i {
@@ -67,6 +63,12 @@
 
 .container_redes {
   border-bottom: 1px solid;
+}
+
+@media screen and (max-width: 378px) {
+  .h5-footer {
+    font-size: $size-2;
+  }
 }
 
 /*############## FIN FOOTER ##############*/

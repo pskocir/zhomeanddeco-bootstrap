@@ -1,4 +1,4 @@
-.container-p-destacado-3, .container-p-destacado-2, .container-p-destacado-1, .container-col, .card-mod, .btn-destacado {
+.h3-descuentos, .container-p-destacado-3, .container-p-destacado-2, .container-p-destacado-1, .container-col, .card-mod, .btn-destacado {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -65,7 +65,7 @@ main {
 }
 
 .card-mod {
-  margin-bottom: 14px;
+  margin: 15px 0 15px 0;
 }
 
 .carrusel-control {
@@ -73,23 +73,9 @@ main {
 }
 
 .carrusel {
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 50vh;
   margin-bottom: 20px;
   border-radius: 5px;
-}
-
-.carrusel-img-1 {
-  background-image: url("../images/1.png");
-}
-
-.carrusel-img-2 {
-  background-image: url("../images/2.png");
-}
-
-.carrusel-img-3 {
-  background-image: url("../images/3.png");
 }
 
 .h2-destacados {
@@ -135,12 +121,18 @@ main {
   padding: 0;
 }
 
+.h3-descuentos {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Cookie", cursive;
+  color: #c29360;
+}
+
 @media screen and (max-width: 378px) {
   .container_header-img {
     display: none;
   }
   .carrusel {
-    background-position: center;
     height: 30vh;
   }
 }
@@ -174,8 +166,8 @@ main {
   width: 100%;
 }
 
-.navbar-bg {
-  background-color: #d4c3b7;
+.navbar-mod {
+  display: inline-block;
 }
 
 .nav-lista {
@@ -229,16 +221,12 @@ main {
 
 .h5-footer {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, cursive;
   font-weight: bold;
+  font-size: 18px;
   margin-top: 10px;
 }
 
-@media screen and (max-width: 378px) {
-  .h5-footer {
-    font-size: 15px;
-  }
-}
 .footer_socialmedia i {
   padding: 18px;
 }
@@ -278,7 +266,13 @@ main {
   border-bottom: 1px solid;
 }
 
+@media screen and (max-width: 378px) {
+  .h5-footer {
+    font-size: 15px;
+  }
+}
 /*############## FIN FOOTER ##############*/
+/*############## SOBRE NOSOTROS ##############*/
 .container_aboutus {
   display: flex;
   justify-content: center;
@@ -297,17 +291,18 @@ main {
 .container_aboutus-caja p {
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 378px) {
   .container_aboutus-caja p {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
+/*############## FIN SOBRE NOSOTROS ##############*/
 /*############## PREGUNTAS FRECUENTES ##############*/
 .preg__frecuentes {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -316,10 +311,8 @@ main {
 }
 
 @media screen and (max-width: 378px) {
-  .preg__frecuentes {
-    font-size: 20px;
-  }
-  .preg__frecuentes__respuestas {
+  .preg__frecuentes,
+.preg__frecuentes__respuestas {
     font-size: 15px;
   }
 }
@@ -328,6 +321,16 @@ main {
   margin-top: 15px;
   margin-bottom: 15px;
   width: 80%;
+}
+
+input.form-control,
+input.form-control:focus {
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-transition: none;
+  -webkit-transition: none;
 }
 
 /*# sourceMappingURL=style.css.map */

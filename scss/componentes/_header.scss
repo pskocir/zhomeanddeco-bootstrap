@@ -9,10 +9,9 @@
   width: 100%;
 }
 
-.navbar-bg {
-  background-color: $color-1;
+.navbar-mod {
+  display: inline-block;
 }
-
 .nav-lista {
   @include titulo_principal($size-3, $color-5, $font-navbar);
   font-weight: bold;

@@ -1,3 +1,5 @@
+/*############## SOBRE NOSOTROS ##############*/
+
 .container_aboutus {
   display: flex;
   justify-content: center;
@@ -15,13 +17,15 @@
     p {
       text-align: center;
       font-family: "Raleway", sans-serif;
-      font-size: $size-2;
+      font-size: $size-3;
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 378px) {
   .container_aboutus-caja p {
-    font-size: $size-3;
+    font-size: $size-2;
   }
 }
+
+/*############## FIN SOBRE NOSOTROS ##############*/

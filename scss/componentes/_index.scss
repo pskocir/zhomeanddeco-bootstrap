@@ -3,22 +3,20 @@
 }
 
 .carrusel {
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 50vh;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.carrusel-img-1 {
-  background-image: url("../images/1.png");
-}
-.carrusel-img-2 {
-  background-image: url("../images/2.png");
-}
-.carrusel-img-3 {
-  background-image: url("../images/3.png");
-}
+// .carrusel-img-1 {
+//   background-image: url("../images/1.png");
+// }
+// .carrusel-img-2 {
+//   background-image: url("../images/2.png");
+// }
+// .carrusel-img-3 {
+//   background-image: url("../images/3.png");
+// }
 
 .h2-destacados {
   @include titulo_principal(60px, $color-5, $font-titulo);
@@ -63,12 +61,19 @@
   padding: 0;
 }
 
+.h3-descuentos {
+  @extend %display-flexible-centrado;
+  font-size: $size-6;
+  margin-bottom: 10px;
+  font-family: $font-titulo;
+  color: $color-5;
+}
+
 @media screen and (max-width: 378px) {
   .container_header-img {
     display: none;
   }
   .carrusel {
-    background-position: center;
     height: 30vh;
   }
 }
@@ -77,6 +82,7 @@
   .carrusel {
     background-position: center;
   }
+
   .card-img-top {
     height: 400px;
     width: 300px;
