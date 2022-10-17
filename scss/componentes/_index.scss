@@ -1,40 +1,97 @@
-.titulo {
-  @include titulo_principal(35px, black);
+.carrusel-control {
+  background-color: $color-4;
 }
 
-.card-body {
-  background-color: $color-card-background;
+.carrusel {
+  height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-.card {
-  -webkit-box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  -moz-box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  box-shadow: 0px 0px 24px 4px $color-card-shadow;
-  overflow: hidden;
+.h2-destacados {
+  @include titulo_principal(60px, $color-5, $font-titulo);
+  margin-bottom: 10px;
 }
 
-.img_container-descuentos {
-  padding: 20px;
+.container-col {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  height: 250px;
+  background-color: $color-8;
+}
+
+.container-p-destacado-1 {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  background-color: $color-11;
+}
+
+.container-p-destacado-2 {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  background-color: $color-7;
+}
+
+.container-p-destacado-3 {
+  @extend %display-flexible-centrado;
+  align-items: center;
+  background-color: $color-12;
+}
+
+.p-destacado {
+  font-size: 30px;
+}
+
+.card-size {
+  height: auto;
+  width: auto;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.h3-descuentos {
+  @extend %display-flexible-centrado;
+  font-size: $size-7;
+  margin-bottom: 10px;
+  font-family: $font-titulo;
+  color: $color-5;
 }
 
 @media screen and (max-width: 378px) {
   .container_header-img {
     display: none;
   }
+  .carrusel {
+    height: 30vh;
+  }
+}
 
-  .p-descuentos {
-    border-style: none;
+@media screen and (max-width: 768px) {
+  .carrusel {
+    background-position: center;
   }
 
-  .img-hidden {
-    display: none;
+  .card-img-top {
+    height: 400px;
+    width: 300px;
+    justify-content: center;
   }
 
-  .card {
-    margin: 10px;
+  .top {
+    order: 2;
+  }
+  .bottom {
+    order: 1;
   }
 
-  .h2-destacados {
-    display: none;
+  .img-fluid {
+    width: 200px;
+    height: 200px;
+  }
+
+  .h3-descuentos {
+    font-size: $size-6;
   }
 }

@@ -1,0 +1,31 @@
+/*############## SOBRE NOSOTROS ##############*/
+
+.container_aboutus {
+  display: flex;
+  justify-content: center;
+
+  &-caja {
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid $color-5;
+    background-image: url("../images/aboutus.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    p {
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-size: $size-3;
+    }
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .container_aboutus-caja p {
+    font-size: $size-2;
+  }
+}
+
+/*############## FIN SOBRE NOSOTROS ##############*/

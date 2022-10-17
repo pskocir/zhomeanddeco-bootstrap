@@ -1,17 +1,45 @@
 /*############## HEADER ##############*/
 
 .container_header-img {
-  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-  .img_header {
-    width: 50%;
-  }
+.img_header {
+  width: 100%;
 }
 
 .navbar-mod {
-  font-size: 20px;
-  font-family: "Cairo", sans-serif;
+  display: inline-block;
+}
+.nav-lista {
+  @include titulo_principal($size-3, $color-5, $font-navbar);
   font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  &:hover {
+    color: $color-2;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container_header-img {
+    display: none;
+  }
+  .titulo {
+    display: flex;
+  }
+  .nav-lista {
+    @include titulo_principal(19px, $color-5, $font-navbar);
+  }
+}
+@media screen and (min-width: 992px) {
+  .logo_nav {
+    display: none;
+  }
+  .titulo {
+    display: none;
+  }
 }
 
 /*############## FIN HEADER ##############*/

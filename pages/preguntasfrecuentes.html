@@ -5,114 +5,139 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Preguntas mas frecuentes">
+  <meta name="description" content="Tienda de articulos Home & Deco de ultima moda">
+  <meta name="keywords" content="Home, Deco, Decoracion, Hogar, Armonia, Almohadones, Acolchados, Mantas">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Raleway:wght@500&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90322e0a8d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:wght@500&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../css/style.css">
   <title>Preguntas Frecuentes | Z Home & Deco</title>
   <link rel="icon" href="../images/favicon_zhome.jpg">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <header>
-    <div class="container_header-img">
-      <img class="img_header" src="../images/logo_header.jpg" class="img-fluid" alt="logo izquierdo">
-      <img class="img_header" src="../images/logo_imagen.jpg" class="img-fluid" alt="logo derecho">
+    <div class="container-fluid container_header-img">
+      <img class="img_header" src="../images/header.png" alt="Logo Z Home & Deco">
     </div>
-    <nav class="navbar navbar-expand-lg navbar-mod">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid navbar-mod">
+
+        <a href="../index.html"><img class="logo_nav" src="../images/favicon_zhome.jpg" alt="Logo Z Home & Deco"></a>
+        <h1 class="titulo">Home & Deco</h1>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-style">
-
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto fs-4">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
+              <a class="nav-link nav-lista" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/productos.html">PRODUCTOS</a>
+              <a class="nav-link nav-lista" href="../pages/productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/preguntasfrecuentes.html">PREGUNTAS
-                FRECUENTES</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/sobrenosotros.html">SOBRE
-                NOSOTROS</a>
+              <a class="nav-link nav-lista active" href="../pages/preguntasfrecuentes.html"
+                aria-current="page">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/contactenos.html">CONTACTENOS</a>
+              <a class="nav-link nav-lista" href="../pages/sobrenosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-lista" href="../pages/contactenos.html">Contactenos</a>
             </li>
           </ul>
-
+          <form class="d-flex">
+            <button class="btn btn-destacado" type="submit">LOG IN</button>
+          </form>
         </div>
       </div>
     </nav>
-
-
   </header>
 
-  <section class="container_preguntas">
-    <div class="container_preguntas-cajas">
-      <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
-      <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
-        ubicación, en el checkout, en el momento previo al pago.</p>
-      <br />
-
-      <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
-      <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu compra.</p>
-      <br />
-
-      <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
-      <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
-      <br />
-
-      <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
-      <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de que se
-        despacha el pedido.</p>
-      <br />
-
-      <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
-      <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego de
-        recibida la compra.</p>
-      <br />
-
-    </div>
-
-  </section>
-  <footer>
-    <div class="card">
-      <div class="card-header">
-
+  <main>
+    <section>
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <div class="caja">
+          <p class="preg__frecuentes">¿Cuál es el costo de envío?</p>
+          <p class="preg__frecuentes__respuestas"> El costo de envío será mostrado en base al total de la compra y
+            ubicación, en el checkout, en el momento previo al pago.</p>
+          <br />
+          <p class="preg__frecuentes">¿Hay demora en la entrega de productos?</p>
+          <p class="preg__frecuentes__respuestas"> Si, manejamos un mínimo de 10 días hábiles para despachar tu
+            compra.
+          </p>
+          <br />
+          <p class="preg__frecuentes">¿Dónde puedo recibir mi pedido?</p>
+          <p class="preg__frecuentes__respuestas">Realizamos envíos a todo el país a través de OCA.</p>
+          <br />
+          <p class="preg__frecuentes">¿Cuánto tarda en llegar el pedido?</p>
+          <p class="preg__frecuentes__respuestas">En general la demora se encuentra entre 3 y 7 días hábiles luego de
+            que
+            se
+            despacha el pedido.</p>
+          <br />
+          <p class="preg__frecuentes">¿Cuál es el plazo para realizar un cambio?</p>
+          <p class="preg__frecuentes__respuestas">Puedes solicitar un cambio del producto hasta 15 días corridos luego
+            de
+            recibida la compra.</p>
+          <br />
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto">
+    <div class="container-fluid bg-footer">
       <div class="card-body">
-        <h5 class="card-title h5-titulo">Redes Sociales</h5>
+        <div class="container">
+          <h5 class="h5-footer">SEGUINOS EN NUESTRAS REDES</h5>
+        </div>
         <div class="footer_socialmedia">
-          <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <a class="localidad-mod"
+                  href="https://www.google.com.ar/maps/place/San+Fernando,+Provincia+de+Buenos+Aires/@-34.4505444,-58.5841089,14z/data=!3m1!4b1!4m5!3m4!1s0x95bca568119a2861:0x27933dc457c12b90!8m2!3d-34.4430618!4d-58.5579643"
+                  target="_blank"><i class="fa-solid fa-location-dot fa-xl"></i>San
+                  Fernando</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <i class="fa-brands fa-whatsapp fa-xl"></i><span class="tel-mod">11-1234-5678</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="btn-goup">
-          <a href="#"> <i class="fa-solid fa-circle-up fa-xl"></i></a>
+          <a href="#"> <i class="fa-solid fa-circle-up fa-l"></i></a>
         </div>
-
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 </body>
 

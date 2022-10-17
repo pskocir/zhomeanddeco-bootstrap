@@ -1,38 +1,74 @@
 /*############## FOOTER ##############*/
 
-.h5-titulo {
-  text-align: center;
+.bg-footer {
+  background-image: url("../images/bg-footer.png");
+  background-size: cover;
+
+  background-repeat: no-repeat;
 }
 
-.footer_socialmedia {
-  @extend %display-flexible-centrado;
+.footer-bottom {
+  position: absolute;
+}
+
+.h5-footer {
+  text-align: center;
+  font-family: $font-navbar, cursive;
+  font-weight: bold;
+  font-size: $size-3;
+  margin-top: 10px;
 }
 
 .footer_socialmedia i {
-  padding: 10px;
+  padding: 18px;
 }
 
 .fa-brands {
-  color: black;
+  color: $color-4;
 
   &:hover {
-    color: $color-fa-brands;
+    color: $color-5;
     transition: 0.3s;
   }
+}
+
+.localidad-mod {
+  @extend %d-flex-align-center;
+  text-decoration: none;
+  color: $color-4;
+  &:hover {
+    color: $color-5;
+    transition: 0.3s;
+  }
+}
+
+.tel-mod {
+  @extend %d-flex-align-center;
 }
 
 .btn-goup {
   display: flex;
   justify-content: right;
   text-decoration: none;
+  position: relative;
 }
 
 .fa-solid {
-  color: $color-btn-up;
+  color: $color-5;
 
   &:hover {
-    color: $color-fa-brands;
+    color: $color-3;
     transition: 0.3s;
+  }
+}
+
+.container_redes {
+  border-bottom: 1px solid;
+}
+
+@media screen and (max-width: 378px) {
+  .h5-footer {
+    font-size: $size-2;
   }
 }
 

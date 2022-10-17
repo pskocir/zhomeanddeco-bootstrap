@@ -1,0 +1,19 @@
+/*############## PREGUNTAS FRECUENTES ##############*/
+
+.preg__frecuentes {
+  font-size: $size-4;
+  font-weight: bold;
+}
+
+.preg__frecuentes__respuestas {
+  font-size: $size-3;
+}
+
+@media screen and (max-width: 378px) {
+  .preg__frecuentes,
+  .preg__frecuentes__respuestas {
+    font-size: $size-2;
+  }
+}
+
+/*############## FIN PREGUNTAS FRECUENTES ##############*/

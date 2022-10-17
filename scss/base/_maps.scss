@@ -1,5 +1,7 @@
+@import "../base/colors";
+
 $main: (
-  bg-principal: url("../images/background-image.jpeg"),
+  bg-principal: $color-1,
   overflow-equis: hidden,
   font: $font-principal,
 );

@@ -4,39 +4,54 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-body {
-  background-image: url("../images/background-image.jpeg");
   overflow-x: hidden;
 }
 
-// main {
-//   font-family: $font-principal;
-// }
-
-.btn-destacado {
-  background: $color-btn;
-  background: linear-gradient(
-    90deg,
-    rgba(194, 147, 96, 1) 0%,
-    rgba(247, 204, 155, 1) 100%
-  );
-  border-color: $color-btn;
-  @extend %display-flexible-centrado;
-
-  &:hover {
-    color: $color-btn-hover;
-    border-color: $color-btn-hover;
-  }
+body {
+  background-color: $color-1;
 }
 
-.form-size {
-  max-width: 70%;
+.logo_nav {
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+}
+
+.titulo {
+  @include titulo_principal(35px, $color-5, $font-titulo);
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  -moz-box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  box-shadow: 0px 0px 24px 4px $color-card-shadow;
+  overflow: hidden;
+  background-color: $color-1;
+}
+
+.btn-destacado {
+  background-color: $color-4;
+  border-color: $color-4;
+  color: $color-1;
+  @extend %display-flexible-centrado;
+  border-radius: 10px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-5 !important;
+    color: $color-1 !important;
+  }
 }
 
 main {
   background-color: map-get($map: $main, $key: bg-principal);
   overflow-x: map-get($map: $main, $key: overflow-equis);
   font-family: map-get($map: $main, $key: font);
+}
+
+.card-mod {
+  @extend %display-flexible-centrado;
+  margin: 15px 0 15px 0;
 }
