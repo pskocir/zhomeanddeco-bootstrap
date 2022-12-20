@@ -1,4 +1,4 @@
-.h3-descuentos, .container-p-destacado-3, .container-p-destacado-2, .container-p-destacado-1, .container-col, .card-mod, .btn-destacado {
+.h3-descuentos, .container-p-destacado-3, .container-p-destacado-2, .container-p-destacado-1, .container-col, .containerBoton, .card-mod, .btn-destacado {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -66,6 +66,7 @@ main {
 
 .card-mod {
   margin: 15px 0 15px 0;
+  width: 18rem;
 }
 
 .carrusel-control {

@@ -54,4 +54,9 @@ main {
 .card-mod {
   @extend %display-flexible-centrado;
   margin: 15px 0 15px 0;
+  width: 18rem;
+}
+
+.containerBoton {
+  @extend %display-flexible-centrado;
 }

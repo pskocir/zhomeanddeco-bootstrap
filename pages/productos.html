@@ -67,13 +67,24 @@
     </div>
   </header>
   <main class="main_productos">
-    <div class="container">
+    <div id="containerProductos" class="row"></div>
+
+    <h2 class="h2-destacados">Carrito</h2>
+    <h3 class="h2-destacados">El total de la compra es de <span id="total"> </span> </h3>
+    <div class="containerBoton">
+      <button class="btn btn-destacado" id="verCarrito">Ver Carrito</button>
+      <button class="btn btn-destacado" id="vaciarCarrito">Vaciar Carrito</button>
+    </div>
+
+
+    <div id="contenedorCarrito" class="row"></div>
+    <!-- <div id="containerProductos" class="container">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_alaska.jpeg" alt="Almohadon Alaska">
             <div class="card-body">
-              <h5>Almohadon Alaska</h5>
+              <h5 class="card-title" id="producto">Almohadon Alaska</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 700</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -86,7 +97,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_bari.jpeg" alt="Almohadon Bari">
             <div class="card-body">
-              <h5>Almohadon Bari</h5>
+              <h5 class="card-title" id="producto">Almohadon Bari</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 850</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -98,7 +109,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadones_venecia.jpeg" alt="Almohadones Venecia">
             <div class="card-body">
-              <h5>Almohadones Venecia</h5>
+              <h5 class="card-title" id="producto">Almohadones Venecia</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 1300</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -114,7 +125,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_grecia.jpeg" alt="Almohadon Grecia">
             <div class="card-body">
-              <h5 class="card-title">Almohadon Grecia</h5>
+              <h5 class="card-title" id="producto">Almohadon Grecia</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 500</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -127,7 +138,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_merida.jpeg" alt="Almohadon Merida">
             <div class="card-body">
-              <h5 class="card-title">Almohadon Merida</h5>
+              <h5 class="card-title" id="producto">Almohadon Merida</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 650</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -138,7 +149,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_tokio.jpeg" alt="Almohadon Tokio">
             <div class="card-body">
-              <h5 class="card-title">Almohadon Tokio</h5>
+              <h5 class="card-title" id="producto">Almohadon Tokio</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 600</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -151,7 +162,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/almohadon_siena.jpeg" alt="Almohadon Siena">
             <div class="card-body">
-              <h5 class="card-title">Almohadon Siena</h5>
+              <h5 class="card-title" id="producto">Almohadon Siena</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 500</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -164,7 +175,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/manta_malaga.jpeg" alt="Manta Malaga">
             <div class="card-body">
-              <h5 class="card-title">Manta Malaga</h5>
+              <h5 class="card-title" id="producto">Manta Malaga</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 650</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -175,7 +186,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/manta_milan.jpeg" alt="Manta Milan">
             <div class="card-body">
-              <h5 class="card-title">Manta Milan</h5>
+              <h5 class="card-title" id="producto">Manta Milan</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 600</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -188,7 +199,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/manta_roma.jpeg" alt="Manta Roma">
             <div class="card-body">
-              <h5 class="card-title">Manta Roma</h5>
+              <h5 class="card-title" id="producto">Manta Roma</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 500</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -201,7 +212,7 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/manta_siena.jpeg" alt="Manta Siena">
             <div class="card-body">
-              <h5 class="card-title">Manta Siena</h5>
+              <h5 class="card-title" id="producto">Manta Siena</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 650</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
@@ -212,14 +223,14 @@
           <div class="card card-mod" style="width: 18rem;">
             <img src="../images/manta_bsas.jpeg" alt="Manta Buenos Aires">
             <div class="card-body">
-              <h5 class="card-title">Manta Buenos Aires</h5>
+              <h5 class="card-title" id="producto">Manta Buenos Aires</h5>
               <p style="font-family:Arial, Helvetica, sans-serif;">$ 600</p>
               <a href="#" class="btn-destacado">AGREGAR</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </main>
 
   <footer class="mt-auto">
@@ -260,6 +271,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
