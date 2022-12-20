@@ -186,7 +186,7 @@ const mostrarCarrito = () => {
                               <div class ="containerBoton">
                               <button class= "btn btn-destacado" id ="eliminar${producto.id}" >Eliminar producto</button>
                               </div>
-                          </div>
+                          </div> 
                       </div>`;
 
     contenedorCarrito.appendChild(card);
