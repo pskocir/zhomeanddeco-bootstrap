@@ -119,7 +119,9 @@ const mostrarProductos = () => {
                               <h5> ${producto.descripcion} </h5>
                               <p> $ ${producto.precio} </p>
                               <div class ="containerBoton">
+                              <button class= "btn btn-destacado" id = "botonMenos${producto.id}" >-</button>
                               <button class= "btn btn-destacado" id = "boton${producto.id}" >AGREGAR</button>
+                              <button class= "btn btn-destacado" id = "botonMas${producto.id}" >+</button>
                               </div>
                           </div>
                       </div>`;
@@ -132,12 +134,50 @@ const mostrarProductos = () => {
     boton.addEventListener("click", () => {
       agregarAlCarrito(producto.id);
     });
+
+    const botonMenos = document.getElementById(`botonMenos${producto.id}`);
+
+    botonMenos.addEventListener("click", () => {
+      disminuirCantidad(producto.id);
+    });
+
+    const botonMas = document.getElementById(`botonMas${producto.id}`);
+
+    botonMas.addEventListener("click", () => {
+      aumentarCantidad(producto.id);
+    });
   });
 };
 
 //Función agregar al carrito:
 
 const agregarAlCarrito = (id) => {
+  const productoEnCarrito = carrito.find((producto) => producto.id === id);
+  if (productoEnCarrito) {
+    productoEnCarrito.cantidad++;
+  } else {
+    const producto = arrayProducto.find((producto) => producto.id === id);
+    carrito.push(producto);
+    //Trabajamos con el localStorage:
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+  calcularTotal();
+};
+
+const disminuirCantidad = (id) => {
+  const productoEnCarrito = carrito.find((producto) => producto.id === id);
+  if (productoEnCarrito) {
+    productoEnCarrito.cantidad--;
+  } else {
+    const producto = arrayProducto.find((producto) => producto.id === id);
+    carrito.push(producto);
+    //Trabajamos con el localStorage:
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+  calcularTotal();
+};
+
+const aumentarCantidad = (id) => {
   const productoEnCarrito = carrito.find((producto) => producto.id === id);
   if (productoEnCarrito) {
     productoEnCarrito.cantidad++;
@@ -241,3 +281,18 @@ const calcularTotal = () => {
   });
   total.innerHTML = `: $${totalCompra}`;
 };
+
+const btnAdd = document.getElementById("boton1");
+
+btnAdd.addEventListener("click", () => {
+  Toastify({
+    text: "Producto agregado al carrito",
+    duration: 3000,
+    gravity: "bottom",
+    position: "right",
+    destination: "https://www.google.com",
+    style: {
+      background: "linear-gradient(to right, #b7950b, #fdebd0)",
+    },
+  }).showToast();
+});

@@ -52,6 +52,7 @@ body {
   color: #d4c3b7;
   border-radius: 10px;
   text-decoration: none;
+  margin: 5px;
 }
 .btn-destacado:hover {
   background-color: #c29360 !important;

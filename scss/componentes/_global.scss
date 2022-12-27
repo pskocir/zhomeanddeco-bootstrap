@@ -38,6 +38,7 @@ body {
   @extend %display-flexible-centrado;
   border-radius: 10px;
   text-decoration: none;
+  margin: 5px;
 
   &:hover {
     background-color: $color-5 !important;
