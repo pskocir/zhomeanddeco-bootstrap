@@ -1,4 +1,4 @@
-//Creamos clase Producto
+//////// Se crea la clase PRODUCTO con su constructor ////////
 
 class Producto {
   constructor(id, descripcion, precio, images) {
@@ -78,7 +78,10 @@ const mantaBsas = new Producto(
   "../images/manta_bsas.jpeg"
 );
 
-//Creamos array de producto y lo pusheamos.
+////////////////////////////////////////////////////////
+
+
+//////////Creamos array de producto y lo pusheamos.////////
 
 arrayProducto = [];
 
@@ -94,11 +97,13 @@ arrayProducto.push(mantaRoma);
 arrayProducto.push(mantaSiena);
 arrayProducto.push(mantaBsas);
 
-//Creamos el array del Carrito de compras:
+////////////////////////////////////////////////////////
+
+//////////Creamos el array del Carrito de compras:
 
 let carrito = [];
 
-//Creamos funcion para mostrar productos. Recorre el arrayProducto y genera los divs y cards correspondientes con sus estilos.
+//////////Creamos funcion para mostrar productos. Recorre el arrayProducto y genera los divs y cards correspondientes con sus estilos.
 
 const containerProductos = document.getElementById("containerProductos");
 
@@ -119,20 +124,33 @@ const mostrarProductos = () => {
                               <h5> ${producto.descripcion} </h5>
                               <p> $ ${producto.precio} </p>
                               <div class ="containerBoton">
-                              <button class= "btn btn-destacado" id = "botonMenos${producto.id}" >-</button>
+                              <button class= "btn btn-destacado" id = "botonMenos${producto.id}" >QUITAR</button>
                               <button class= "btn btn-destacado" id = "boton${producto.id}" >AGREGAR</button>
-                              <button class= "btn btn-destacado" id = "botonMas${producto.id}" >+</button>
+                              
                               </div>
                           </div>
                       </div>`;
 
     containerProductos.appendChild(card);
 
-    //Agregar productos al carrito:
+ ////////////////////////////////////////////////////////
+
+
+ //////////Agregar productos al carrito:
 
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener("click", () => {
       agregarAlCarrito(producto.id);
+      Toastify({
+        text: "PRODUCTO AGREGADO",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        style:
+        {
+            background: "#af9274",
+        }
+    }).showToast();
     });
 
     const botonMenos = document.getElementById(`botonMenos${producto.id}`);
@@ -141,13 +159,12 @@ const mostrarProductos = () => {
       disminuirCantidad(producto.id);
     });
 
-    const botonMas = document.getElementById(`botonMas${producto.id}`);
-
-    botonMas.addEventListener("click", () => {
-      aumentarCantidad(producto.id);
-    });
   });
 };
+
+//funcion para mostrar productos generados por js
+
+mostrarProductos();
 
 //Función agregar al carrito:
 
@@ -157,6 +174,10 @@ const agregarAlCarrito = (id) => {
     productoEnCarrito.cantidad++;
   } else {
     const producto = arrayProducto.find((producto) => producto.id === id);
+    if (producto.eliminado) {
+      producto.cantidad = 1;
+      producto.eliminado = false;
+    }
     carrito.push(producto);
     //Trabajamos con el localStorage:
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -164,10 +185,22 @@ const agregarAlCarrito = (id) => {
   calcularTotal();
 };
 
+//Funcion para disminuir cantidad
 const disminuirCantidad = (id) => {
   const productoEnCarrito = carrito.find((producto) => producto.id === id);
-  if (productoEnCarrito) {
+  if (productoEnCarrito && productoEnCarrito.cantidad > 0) {
+    
     productoEnCarrito.cantidad--;
+    Toastify({
+      text: "UNIDAD ELIMINADA",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      style:
+      {
+          background: "#af9274",
+      }
+  }).showToast();
   } else {
     const producto = arrayProducto.find((producto) => producto.id === id);
     carrito.push(producto);
@@ -177,20 +210,7 @@ const disminuirCantidad = (id) => {
   calcularTotal();
 };
 
-const aumentarCantidad = (id) => {
-  const productoEnCarrito = carrito.find((producto) => producto.id === id);
-  if (productoEnCarrito) {
-    productoEnCarrito.cantidad++;
-  } else {
-    const producto = arrayProducto.find((producto) => producto.id === id);
-    carrito.push(producto);
-    //Trabajamos con el localStorage:
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-  calcularTotal();
-};
 
-mostrarProductos();
 
 //MOSTRAR EL CARRITO DE COMPRAS.
 
@@ -199,51 +219,110 @@ const contenedorCarrito = document.getElementById("contenedorCarrito");
 const verCarrito = document.getElementById("verCarrito");
 
 verCarrito.addEventListener("click", () => {
+  
   mostrarCarrito();
 });
 
-//Función para mostar el carrillllooo:
+
+//Mostramos mensaje con el total de la compra:
+
+
+
+const calcularTotal = () => {
+  let totalCompra = 0;
+  carrito.forEach((producto) => {
+    totalCompra += producto.precio * producto.cantidad;
+  });
+  
+  return totalCompra;
+};
 
 const mostrarCarrito = () => {
   contenedorCarrito.innerHTML = "";
 
+  const tabla = document.createElement("table");
+  tabla.classList.add("table", "table-striped");
+  tabla.innerHTML = `
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Unidades</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
+
   carrito.forEach((producto) => {
-    const card = document.createElement("div");
-    card.classList.add(
-      "col-lg-4",
-      "col-md-4",
-      "col-sm-12",
-      "d-flex",
-      "justify-content-center"
-    );
-    card.innerHTML = `
-                      <div class = "card card-mod">
-                          <img src = "${producto.images}"  alt = " ${producto.descripcion}">
-                          <div class ="card-body">
-                              <h5> ${producto.descripcion} </h5>
-                              <p> ${producto.precio} </p>
-                              <p> ${producto.cantidad} UNIDAD </p>
-                              <div class ="containerBoton">
-                              <button class= "btn btn-destacado" id ="eliminar${producto.id}" >Eliminar producto</button>
-                              </div>
-                          </div> 
-                      </div>`;
-
-    contenedorCarrito.appendChild(card);
-
-    //Eliminar productos del carrito:
-
-    const boton = document.getElementById(`eliminar${producto.id}`);
-    boton.addEventListener("click", () => {
-      eliminarDelCarrito(producto.id);
-    });
+    if(producto.cantidad > 0){
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${producto.descripcion}</td>
+      <td>${producto.cantidad}</td>
+      <td>${producto.precio}</td>
+      <td>${producto.cantidad * producto.precio}</td>
+    `;
+    tabla.appendChild(fila);
+  }
   });
-  calcularTotal();
+
+  tabla.innerHTML += `
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="col">Total</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">${calcularTotal()}</th>
+      </tr>
+      <tr>
+      <td colspan="4">
+        <button id="btnFinalizarCompra" class="btn btn-destacado">Finalizar compra</button>
+      </td>
+    </tr>
+    </tfoot>
+  `;
+
+  contenedorCarrito.appendChild(tabla);
+  
 };
+
+//funciona para finalizar compra 
+
+const btnFinalizarCompra = document.querySelector("#btnFinalizarCompra");
+btnFinalizarCompra.addEventListener("click", () => {
+  swal.Fire({
+    title: "¿Deseas finalizar la compra?",
+    text: "Una vez finalizada, no podrás agregar ni eliminar productos del carrito",
+    icon: "warning",
+    buttons: ["Cancelar", "Aceptar"],
+  }).then((result) => {
+    if (result) {
+      // Si se hizo click en "Aceptar", mostramos un cartel de éxito
+      swal.Fire({
+        title: "Compra finalizada",
+        text: "Gracias por tu compra",
+        icon: "success",
+      });
+      // Deshabilitamos el botón "Finalizar compra" para evitar que se vuelva a hacer click
+      btnFinalizarCompra.setAttribute("disabled", true);
+      // Vaciamos el carrito
+      carrito = [];
+      // Actualizamos el almacenamiento local
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      // Ocultamos la tabla del carrito
+      tabla.style.display = "none";
+    }
+  });
+});
+
+
+
 
 //Función que elimina el producto del carrito:
 
-const eliminarDelCarrito = (id) => {
+function eliminarDelCarrito(id) {
   const producto = carrito.find((producto) => producto.id === id);
   const indice = carrito.indexOf(producto);
   carrito.splice(indice, 1);
@@ -252,47 +331,28 @@ const eliminarDelCarrito = (id) => {
 
   //localStorage:
   localStorage.setItem("carrito", JSON.stringify(carrito));
-};
+}
 
 //VACIAMOS TODO EL CARRITO DE COMPRAS:
 
 const vaciarCarrito = document.getElementById("vaciarCarrito");
-
 vaciarCarrito.addEventListener("click", () => {
+  
   eliminarTodoElCarrito();
+  
 });
 
 const eliminarTodoElCarrito = () => {
   carrito = [];
-  mostrarCarrito();
 
+  // eliminamos la tabla de la página
+  const tabla = contenedorCarrito.querySelector("table");
+  contenedorCarrito.removeChild(tabla);
+  
   //localStorage:
   localStorage.clear();
+  
 };
 
-//Mostramos mensaje con el total de la compra:
 
-const total = document.getElementById("total");
 
-const calcularTotal = () => {
-  let totalCompra = 0;
-  carrito.forEach((producto) => {
-    totalCompra += producto.precio * producto.cantidad;
-  });
-  total.innerHTML = `: $${totalCompra}`;
-};
-
-const btnAdd = document.getElementById("boton1");
-
-btnAdd.addEventListener("click", () => {
-  Toastify({
-    text: "Producto agregado al carrito",
-    duration: 3000,
-    gravity: "bottom",
-    position: "right",
-    destination: "https://www.google.com",
-    style: {
-      background: "linear-gradient(to right, #b7950b, #fdebd0)",
-    },
-  }).showToast();
-});
