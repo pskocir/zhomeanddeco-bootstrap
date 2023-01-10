@@ -1,4 +1,4 @@
-//////// Se crea la clase PRODUCTO con su constructor ////////
+// Se crea la clase PRODUCTO con su constructor 
 
 class Producto {
   constructor(id, descripcion, precio, images) {
@@ -78,9 +78,9 @@ const mantaBsas = new Producto(
   "../images/manta_bsas.jpeg"
 );
 
-////////////////////////////////////////////////////////
 
-//////////Creamos array de producto y lo pusheamos.////////
+
+//Creamos array de producto y lo pusheamos.
 
 arrayProducto = [];
 
@@ -96,15 +96,17 @@ arrayProducto.push(mantaRoma);
 arrayProducto.push(mantaSiena);
 arrayProducto.push(mantaBsas);
 
-////////////////////////////////////////////////////////
 
-//////////Creamos el array del Carrito de compras:
+
+//Creamos el array del Carrito de compras:
 
 let carrito = [];
 
-//////////Creamos funcion para mostrar productos. Recorre el arrayProducto y genera los divs y cards correspondientes con sus estilos.
 
+//Acceso al dom
 const containerProductos = document.getElementById("containerProductos");
+
+//Creamos funcion para mostrar productos. Recorre el arrayProducto y genera los divs y cards correspondientes con sus estilos de bootstrap.
 
 const mostrarProductos = () => {
   arrayProducto.forEach((producto) => {
@@ -132,9 +134,9 @@ const mostrarProductos = () => {
 
     containerProductos.appendChild(card);
 
-    ////////////////////////////////////////////////////////
 
-    //////////Agregar productos al carrito:
+
+    //Agregar productos al carrito:
 
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener("click", () => {
@@ -154,7 +156,7 @@ const mostrarProductos = () => {
 
     botonMenos.addEventListener("click", () => {
       disminuirCantidad(producto.id);
-      
+
     });
   });
 };
@@ -162,7 +164,6 @@ const mostrarProductos = () => {
 //funcion para mostrar productos generados por js
 
 mostrarProductos();
-
 
 
 //Función agregar al carrito:
@@ -179,15 +180,25 @@ const agregarAlCarrito = (id) => {
       producto.eliminado = false;
     }
     carrito.push(producto);
-    //Trabajamos con el localStorage:
+    //Modificamos el localStorage:
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
   calcularTotal();
 };
 
+//MOSTRAR EL CARRITO DE COMPRAS.
 
-//Funcion mostrar carrito de compras
+const contenedorCarrito = document.getElementById("contenedorCarrito");
+const verCarrito = document.getElementById("verCarrito");
+verCarrito.addEventListener("click", () => {
+  mostrarCarrito();
+});
+
 const mostrarCarrito = () => {
+  // Primero obtenemos el carrito del almacenamiento local
+  const carritoLocal = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  // Luego actualizamos el contenido del carrito
   contenedorCarrito.innerHTML = "";
   const tabla = document.createElement("table");
   tabla.classList.add("table", "table-striped");
@@ -203,7 +214,7 @@ const mostrarCarrito = () => {
     <tbody>
   `;
 
-  carrito.forEach((producto) => {
+  carritoLocal.forEach((producto) => {
     if (producto.cantidad > 0) {
       const fila = document.createElement("tr");
       fila.innerHTML = `
@@ -235,21 +246,11 @@ const mostrarCarrito = () => {
 
   //Si el carrito está vacio, deshabilita el boton de finalizar compra.
 
-  if (carrito.length === 0) {
+  if (carritoLocal.length === 0) {
     btnFinalizarCompra.removeAttribute("disabled");
   }
-
-  
 };
 
-
-//MOSTRAR EL CARRITO DE COMPRAS.
-
-const contenedorCarrito = document.getElementById("contenedorCarrito");
-const verCarrito = document.getElementById("verCarrito");
-verCarrito.addEventListener("click", () => {
-  mostrarCarrito();
-});
 
 //Funcion para disminuir cantidad
 const disminuirCantidad = (id) => {
@@ -268,12 +269,11 @@ const disminuirCantidad = (id) => {
   } else {
     const producto = arrayProducto.find((producto) => producto.id === id);
     carrito.push(producto);
-    //Trabajamos con el localStorage:
+    //Modificamos el localStorage:
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
   calcularTotal();
 };
-
 
 
 //Mostramos mensaje con el total de la compra:
@@ -287,9 +287,10 @@ const calcularTotal = () => {
 };
 
 
-//funcion para finalizar compra al hacer clic.
+//funcion para finalizar compra al hacer click.
 
 const btnFinalizarCompra = document.getElementById("finalizarCompra");
+
 btnFinalizarCompra.addEventListener("click", () => {
   if (carrito.length === 0) {
     Swal.fire({
